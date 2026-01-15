@@ -12,9 +12,8 @@ echo "<font color='red'>World</font>";
 
 !
 
-<?php
-phpinfo();
-?>
+<h1>Welcome to the App App</h1>
+<a href="contact.php">Contact Us</a>
 
 </body>
 </html>

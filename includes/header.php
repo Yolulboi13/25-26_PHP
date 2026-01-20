@@ -13,26 +13,16 @@
     <nav class="navbar navbar-default navbar-expand-sm bg-info navbar-dark">
         <div class="container-fluid">
             <ul class="nav navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#">Link 1</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
-
-                <!-- Dropdown Start -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Drop 1</a></li>
-                        <li><a class="dropdown-item" href="#">Drop 2</a></li>
-                        <li><a class="dropdown-item" href="#">Drop 3</a></li>
-                    </ul>
-
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.php">Index</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.php">Contact Us</a></li>
+                <?php
+                if(isset($_SESSION["user"])){
+                    echo '<li class=nav-item>Hello ' + $_SESSION['user'] + "!";
+                }else {
+                    echo '<li class="nav-item" ><a class="nav-link" href = "login.php" > Login</a ></li >';
+                }
+                ?>
                 <!-- Dropdown End -->
-
             </ul>
-
-
         </div>
     </nav>
